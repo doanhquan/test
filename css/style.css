@@ -1,0 +1,468 @@
+@charset "utf-8";
+
+html{
+	scroll-behavior: smooth;
+}
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	outline: none;
+}
+body{
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+a{
+	text-decoration: none;
+}
+::selection{
+	background: orange;
+	color: #fff;
+}
+button,span{
+	outline: none;
+}
+.back-to-top{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	color: #fff;
+	border: 1px solid #fff;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+.back-to-top:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.header-area{
+	position: relative;
+	background: url(../img/nf.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	
+}
+.header-area video{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header-area .navbar .navbar-nav .nav-item .nav-link{
+	color: #fff;
+}
+.slogan{
+	color: #fff;
+	padding-top: 25%;
+}
+.about-area .about-title{
+	transform: rotate(90deg);
+	display: inline-block;
+	margin-top:4rem;
+	padding: 4rem 0;
+}
+.col-lg-2{
+	border-left: 1px dotted rgba(223, 228, 234,.5);
+	border-right: 1px dotted rgba(223, 228, 234,.5);
+}
+.about-area .about-title h1{
+	display: inline-block;
+	margin-top: 10rem;
+	font-size: 30px;	
+}
+
+.about-area .img-about{
+	padding: 5rem 0;
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+.middle{
+	position: absolute;
+	top 0;
+}
+.about-area .img img{
+	width: 100%;
+	
+}
+.about-area .about-img-skills{
+	background: #000;
+	border: none;
+}
+.about-area .card-back{
+	width: 100%;
+	height: calc(100% - 10rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transform: perspective(600px) rotateY(180deg);
+}
+.about-area .img,.about-area .card-back{
+	backface-visibility: hidden;
+	transition: transform .6s linear;
+}
+.about-area .card-back{
+	background: #f1f1f1;
+
+}
+.about-area .img{
+	transform: perspective(600px) rotateY(0deg);
+}
+.about-area .img-about:hover > .img{
+	transform: perspective(600px) rotateY(-180deg);
+}
+.about-area .img-about:hover > .card-back{
+	transform: perspective(600px) rotateY(0deg);
+}
+.about-area .img .hover-here{
+	color: #fff;
+	background: #000;
+	margin:0;
+	text-align: center;
+	text-transform: uppercase;
+	animation:hover 2s infinite;
+	transition: 1s;
+}
+@keyframes hover{
+	0%{
+		letter-spacing: 0;
+	}
+	50%{
+		letter-spacing: 5px;
+	}
+	100%{
+		letter-spacing: 0;
+	}
+}
+.about-area .text-about{
+	padding: 5rem 0;
+}
+.about-area .text-about .text-title{
+	padding-top: 5rem;
+}
+.about-area .text-about .text-title button{
+	color: #fff;
+	background: #000;
+	border: none;
+	outline: none;
+	padding: .5rem .8rem;
+}
+.skills{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	background: #000;
+	color: #fff;
+	padding: 1rem;
+}
+.skills li{
+	width: 100%;
+	list-style: none;
+	padding: 1rem 0;
+}
+.skills .bar{
+	display: block;
+	height: 5px;
+	background: #353b48;
+	border: 1px solid rgba(255,255,255,0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #fff;
+}
+.skills .bar span{
+	height: 5px;
+	background: #fff;
+	float: left;
+}
+.skills .bar .html{
+	width: 90%;
+}
+.skills .bar .css{
+	width: 85%;
+}
+.skills .bar .js{
+	width: 55%;
+}
+.skills .bar .jq{
+	width: 50%;
+}
+
+/*=================service================*/
+.service-area{
+	background: #000;
+	position: relative;
+
+}
+
+.service-area .about-title{
+	color: #ccc;
+}
+.service-area .service{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:3rem;
+
+}
+.service .left-sv img{
+	width: 100%;
+}
+.service .right-sv h4{
+	color: #fff;
+}
+.service .right-sv p{
+	color: #fff;
+}
+.service .right-sv button{
+	padding: .3rem .5rem;
+	color: #000;
+	background: #fff;
+	border: none;
+	transition: 1s;
+}
+.service .right-sv button:hover{
+	
+	background: #000;
+	color: #fff;
+	box-shadow: 0 1px 30px #fff;
+}
+/*======================end service====================*/
+/*========================project======================*/
+
+.project-area .project-item{
+	padding-bottom: 23%;
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	
+}
+.project-area .project-item:hover{
+	animation: slide 3s 1;
+}
+@keyframes slide{
+	0%{
+		background-position: top;
+	}
+	100%{
+		background-position: bottom;
+	}
+}
+
+
+.project-area .project-item .see-more p{
+	color: #fff;
+	text-transform: uppercase;
+}
+.project-area .project-bg-1{
+	background-image: url(../img/pd1.jpg);
+}
+.project-area .project-bg-2{
+	background-image: url(../img/pd2.jpg);
+}
+
+.project-area .project-bg-3{
+	background-image: url(../img/pd3.jpg);
+}
+
+.project-area .project-bg-4{
+	background-image: url(../img/pd4.jpg);
+}
+.project-area .project-bg-5{
+	background-image: url(../img/pd5.jpg);
+}
+.project-area .project-bg-6{
+	background-image: url(../img/pd6.jpg);
+}
+
+.project-area .project-bg-7{
+	background-image: url(../img/pd7.jpg);
+}
+
+.project-area .project-bg-8{
+	background-image: url(../img/pd8.jpg);
+}
+
+
+
+
+/*=======================end project===================*/
+
+.review-area .container{
+	border-right: 1px dotted rgba(223, 228, 234,.5);
+}
+.review-area .about-title h1{
+	margin-top: 14rem;
+}
+
+.review-area .carousel{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.client{
+	margin: 0;
+}
+
+
+.client .client-info{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+}
+.client .client-info .client-avt{
+	width: 30%;
+	padding-bottom: 30%;
+	background: url(../img/person-1.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+}
+.client .client-info .cl-avt-2{
+	background: url(../img/person-2.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.client .client-info .cl-avt-3{
+	background: url(../img/person-3.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.client .client-info .cl-avt-4{
+	background: url(../img/person-4.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.client .client-info .client-vote{
+	width: 70%;
+	padding:1rem;
+}
+.client .client-info .client-vote i{
+	color: orange;
+}
+
+/*================contact===============*/
+.d-flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact-area{
+	background: #000;
+}
+.contact-area .about-title{
+	color: #ccc;
+}
+.contact-area .contact-form{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.contact-area .contact-form input{
+	background: transparent;
+	color: #ccc;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	padding: 1rem;
+}
+.contact-area .contact-form textarea{
+	width: 100%;
+	margin-top: 2rem;
+	height:100px;
+	padding: 1rem;
+	resize: none;
+}
+.contact-area .contact-form button{
+	margin-top: 2rem;
+	width: 100%;
+	border: 1px solid #ccc;
+	background: #000;
+	color: #ccc;
+	outline: none;
+	padding: 1rem;
+}
+.contact-area .contact-form button:hover{
+	background: #fff;
+	color: #000;
+}
+.contact-area .contact-map{
+	padding: 2rem 0;
+}
+
+.footer-area{
+	background: #000;
+	padding: 2rem 0 1rem 0;
+	border-top:1px solid #ccc;
+}
+.footer-area p{
+	color: #fff;
+}
+.footer-area p i{
+	margin:0 1rem;
+	font-size: 20px;
+	cursor: pointer;
+	padding: 1rem;
+	border-radius: 50%;
+	transition: 1s;
+}
+.footer-area p i:hover{
+	background: #fff;
+	color: #000;
+	box-shadow: 0 2px 30px #fff;
+}
+@media screen and (max-width: 991px){
+	.about-area .about-title{
+		transform: rotate(0deg);
+		display: inline-block;
+		margin-top:1rem;
+		padding: 1rem 0;
+	}
+	.about-area .about-title h1{
+		margin-top: 0;
+	}
+	.about-area .img-about{
+		padding: 2.5rem 0;
+	}
+	.about-area .text-about{
+		padding: 1rem;
+	}
+	.about-area .about-img-skills{
+		background: #fff;
+	}
+	.about-area .text-about .text-title{
+		padding-top: 1rem;
+	}
+	.project-area .project-item{
+		padding-bottom: 50%;
+	}
+}
